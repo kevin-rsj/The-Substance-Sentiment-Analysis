@@ -2,8 +2,8 @@ import praw
 import pandas as pd
 
 reddit = praw.Reddit(
-    client_id="T8oxS6L1ITDEQYerxPqqfw",
-    client_secret="z2TOqDgjAkF9MpGXA_Y5JwMxASw08w",
+    client_id="your_client_id",
+    client_secret="your_client_secret",
     user_agent="movie_analysis_script",
 )
 
@@ -23,6 +23,7 @@ def fetch_reddit_comments(query, post_limit=500, comment_limit=500):
                 comments_data.append({
                     "post_title": submission.title,
                     'created_utc': submission.created_utc,
+                    'comment_date': comment.created_utc,
                     "comment_body": comment.body,
                     "comment_score": comment.score
                 })
