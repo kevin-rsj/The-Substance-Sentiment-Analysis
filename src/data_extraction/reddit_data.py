@@ -2,8 +2,8 @@ import praw
 import pandas as pd
 
 reddit = praw.Reddit(
-    client_id="your_client_id",
-    client_secret="your_client_secret",
+    client_id="client_id",
+    client_secret="client_secret",
     user_agent="movie_analysis_script",
 )
 
